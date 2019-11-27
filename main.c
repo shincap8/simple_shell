@@ -20,10 +20,8 @@ void launch(void)
 	size_t buffsize = 0;
 
 	cantLoops = 1;
-
 	signal(SIGINT, signals);
 	signal(SIGQUIT, SIG_IGN);
-
 	buffer = NULL;
 	while (1)
 	{
@@ -35,16 +33,18 @@ void launch(void)
 			if (buffer[0] != '\n' && buffer[0] != '#')
 			{
 				cmds = parse(buffer);
-				cmd0 = cmds[0];
-				if (isbuiltin(cmds, buffer) == -1)
-				{
-					flag = 1;
-					constructor(cmds);
-				}
-				if (issame(cmd0, cmds[0]) == 0)
-					free(cmds);
-				else
+				if (cmds[0] == NULL)
 					freeall(cmds);
+				else
+				{
+					cmd0 = cmds[0];
+					if (isbuiltin(cmds, buffer) == -1)
+						flag = 1, constructor(cmds);
+					if (issame(cmd0, cmds[0]) == 0)
+						free(cmds);
+					else
+						freeall(cmds);
+				}
 				cantLoops++;
 			}
 		}
@@ -84,8 +84,6 @@ int isbuiltin(char **cmds, char *buffer)
 				return (builtins[0].func(cmds, buffer));
 			}
 		}
-		if (_strncmp(cmds[0], "yaz", 3) == 0)
-			return (builtins[1].func());
 		if (_strncmp(cmds[0], builtins[i].name, len) == 0)
 			return (builtins[i].func(cmds));
 
