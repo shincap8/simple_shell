@@ -92,7 +92,7 @@ void execute(char **cmds)
 	if (child == 0)
 	{
 		execve(cmds[0], cmds, environ);
-		_puts("hsh: ");
+		_puts("./hsh: ");
 		print_number(cantLoops);
 		_puts(": ");
 		_puts(cmds[0]);
