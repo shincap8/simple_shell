@@ -20,22 +20,22 @@
 ## Introduction
 > Project for the end of the first trimester at Holberton School. This project is for us to show what we have learnt in C during these 3 months, the use of loops, conditional, macros, structures, variables, pointers and more, also to test our teamwork skills and our work under pressure.
 ---
-## Description 
+## Description
 ---
-The _shell() compatible command language interpreter that executes commands read from the standard input or from a file.
+The shell() compatible command language interpreter that executes commands read from the standard input or from a file.
 ---
 ## Installation 
 ---
 In order to run the shell command interpreter, you must install it in your repository by cloning the following (shown below) in your machine running:
 ```
-git clone direccion del repositorio final
+git clone https://github.com/shincap8/simple_shell.git
 ```
 ---
 ## Test
 ---
 - In order to compile the function you must run the following line in your shell:
 ```
-gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+gcc -Wall -Werror -Wextra -pedantic *.c *.h -o hsh
 ```
 _Note_: there are two ways of using the command interpreter:
 
@@ -64,7 +64,7 @@ $
 ```
 ---
 - To read the manual you man run:
-```man ./[FILE]``` taking into account the structure, for our case it would be ```man ./man_hsh```
+```man ./[FILE]``` taking into account the structure, for our case it would be ```man ./man_1_simple_shell```
 
 | File Name | Description and contents |
 | --- | --- |
