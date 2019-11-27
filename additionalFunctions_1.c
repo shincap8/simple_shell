@@ -12,7 +12,7 @@ char **findpath(char **cmds)
 	path = path_copy("PATH");
 	if (path == NULL)
 	{
-		_puts("PATH no localizado\n");
+		_puts("PATH not found\n");
 		_exit(-1);
 	}
 	pathP = strtok(path, delim);

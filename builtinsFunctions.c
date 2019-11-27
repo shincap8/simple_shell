@@ -20,8 +20,9 @@ int exitF(char **cmds, char *buffer)
 		status = _atoi(cmds[1]);
 		if (status == -1)
 		{
-			_puts("1");
-			_puts("exit: illegal number: ");
+			_puts("./hsh: ");
+			print_number(cantLoops);
+			_puts(": exit: Illegal number: ");
 			_puts(cmds[1]);
 			_puts("\n");
 			return (1);
