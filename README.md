@@ -86,6 +86,10 @@ $
 A simple shell must work with the path and without the path
 * /bin/ls
 * ls
+* env "this must print the environment"
+* help "this must print the help"
+* exit "let you exit the shell"
+* unsetenv "remove an environment variable"
 ---
 ### Examples of use
 
@@ -99,7 +103,14 @@ $ pwd
 Here are the result of this actions:
 
 ```
-Image of the console using the commands above
+> ls -a
+.   additionalFunctions_0.c  AUTHORS              .git             hsh        main.c              README.md  _stdlib.c   _string_1.c
+..  additionalFunctions_1.c  builtinsFunctions.c  helpFunctions.c  library.h  man_1_simple_shell  _stdio.c   _string_0.c
+> echo hola
+hola
+> pwd
+/home/vagrant/hbn/simple_shell
+> exit
 ```
 
 
