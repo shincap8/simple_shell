@@ -11,17 +11,21 @@
 - [Features](#features)
 - [Built With](#built-with)
 - [Acknowledgments](#acknowledgments)
+
 ---
 ## Authors 
 ---
 * Kevin Giraldo [Twitter](https://twitter.com/akegiraldo) - [Linkedin](https://www.linkedin.com/in/akegiraldo)
 * Sara Hincapié [Twitter](https://twitter.com/sahimo5) - [Linkedin](https://www.linkedin.com/in/sahimo/)
+
 ---
 ## Introduction
 > Project for the end of the first trimester at Holberton School. This project is for us to show what we have learnt in C during these 3 months, the use of loops, conditional, macros, structures, variables, pointers and more, also to test our teamwork skills and our work under pressure.
+
 ---
 ## Description
 The shell() compatible command language interpreter that executes commands read from the standard input or from a file.
+
 ---
 ## Installation 
 In order to run the shell command interpreter, you must install it in your repository by cloning the following (shown below) in your machine running:
@@ -89,6 +93,7 @@ A simple shell must work with the path and without the path
 * help "this must print the help"
 * exit "let you exit the shell"
 * unsetenv "remove an environment variable"
+
 ---
 ### Examples of use
 
